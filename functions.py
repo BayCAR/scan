@@ -4,6 +4,7 @@ import numpy as np
 import pytesseract
 import matplotlib as plt
 import imageio
+import matplotlib.pyplot as plt
 
 def display(im_path):
     dpi = 80
