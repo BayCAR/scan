@@ -1,7 +1,7 @@
 import cv2
 from imutils.perspective import four_point_transform 
 
-def process_image(image_name, backg=10):
+def contour_image(image_name, backg=10):
     border_thickness = 1
     image0 = cv2.imread(image_name)  # Read the image
     image0 = cv2.copyMakeBorder(image0, border_thickness, border_thickness, border_thickness, border_thickness,
