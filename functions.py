@@ -7,7 +7,7 @@ import imageio
 
 def display(im_path):
     dpi = 80
-    im_data = plt.imread(im_path)
+    im_data = imageio.imread(im_path)
 
     height, width = im_data.shape[:2]
 
