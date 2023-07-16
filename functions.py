@@ -3,6 +3,7 @@ from imutils.perspective import four_point_transform
 import numpy as np
 import pytesseract
 import matplotlib as plt
+import imageio
 
 def display(im_path):
     dpi = 80
