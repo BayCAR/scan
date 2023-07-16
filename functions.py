@@ -6,10 +6,29 @@ import matplotlib as plt
 import imageio
 import matplotlib.pyplot as plt
 
-def display(im_path):
+def displayf(im_path):
     dpi = 80
     im_data = imageio.imread(im_path)
 
+    height, width = im_data.shape[:2]
+
+    # What size does the figure need to be in inches to fit the image?
+    figsize = width/2.5 / float(dpi), height / float(dpi)/1.2
+
+    # Create a figure of the right size with one axes that takes up the full figure
+    fig = plt.figure(figsize=figsize)
+    ax = fig.add_axes([0, 0, 1, 1])
+
+    # Hide spines, ticks, etc.
+    ax.axis('off')
+
+    # Display the image.
+    ax.imshow(im_data, cmap='gray')
+
+    plt.show()
+
+def display(im_data):
+    dpi = 80
     height, width = im_data.shape[:2]
 
     # What size does the figure need to be in inches to fit the image?
